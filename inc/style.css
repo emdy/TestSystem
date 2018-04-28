@@ -1,0 +1,117 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	background-color: #eee;
+	font-size: 14px;
+	font-family: "Roboto Condensed", sans-serif;
+}
+* {
+    moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #5c6873;
+}
+input, select {
+	border:solid 1px #5c6873;
+	border-radius: 4px;
+	background-color: #fff;
+	padding: 3px 7px;
+	outline: none;
+}
+.httponload {
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.main {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 500px;
+}
+.tests,
+.question,
+.results {
+	text-align: center;
+	padding: 0 10px;
+}
+.choose {
+	display: inline-block;
+	width: 100%;
+	max-width: 200px;
+}
+.tests .name {
+	width: 100%;
+}
+.tests .select {
+	width: 100%;
+	margin-top:10px;
+}
+.tests .next,
+.question .next {
+	display: inline-block;
+	margin-top:10px;
+	width: 100%;
+	max-width: 100px;
+	padding: 5px 15px;
+	border:solid 1px #5c6873;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.tests .next[disabled],
+.question .next[disabled] {
+	cursor: default;
+	opacity: .5;
+}
+.question {
+	text-align: center;
+}
+.question .answer {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px 10px;
+	margin-top:5px;
+}
+.question .answer > div {
+	padding: 5px;
+	border:solid 1px gray;
+	border-bottom: solid 3px gray;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.question .answer > div:hover,
+.question .answer > div[selected] {
+	border:solid 1px #6891a2;
+	border-bottom: solid 3px #6891a2;
+}
+.question .progressbar {
+	position: relative;
+	width: 100%;
+	height: 10px;
+	border:solid 1px #5c6873;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.question .progressbar .progress {
+	position: absolute;
+	left: 0;
+	top:0;
+	background-color: #6891a2;
+	border-right: solid 1px #5c6873;
+	height: 100%;
+	width: 0px;
+}
+
+.results a {
+	color:gray;
+	display: inline-block;
+	margin:10px 0;
+}
+
+@media screen and (max-width: 600px) {
+	.question .answer{
+		width: 100%;
+	}
+}
