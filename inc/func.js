@@ -1,6 +1,3 @@
-// Local params
-// var username = '', testdata = null, userans = {testid:null, ans:{}};
-
 $(document).on('change','.tests .select',function() {
 	if ($('.tests .select').val() && $('.tests .name').val().length > 0) {
 		$('.tests .next').removeAttr('disabled');
@@ -33,8 +30,6 @@ $(document).on('click','.tests .next:not([disabled])', function() {
 
 // Select the answer
 $(document).on('click','.question .answer > div', function() {
-	// var qid = $('.question').attr('id'), aid = $(this).attr('id');
-	// userans['ans'][testdata[qid]['id']] = testdata[qid]['ans'][aid]['id'];
 	$('.question .answer > div').removeAttr('selected');
 	$(this).attr('selected','');
 	$('.question .next').removeAttr('disabled');
